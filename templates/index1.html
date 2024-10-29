@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en">
+ <head>
+  <title> BMI PREDICTION </title>
+ </head>
+ <body bgcolor="grey">
+  <div class="login">
+
+   <center>
+      <div>
+      <img src="static/gym_img.jpg" height="200" width="500" />
+      </div>
+      <H1 style="border:2px solid DodgerBlue;">!!! BMI PREDICTION !!!</H1>
+  <form action="{{ url_for('predict')}}" method="post">
+      <H2 style="background-color:DodgerBlue;">HEALTH INFORMATION</H2><BR />
+      
+       Weight <input type="text" name="Weight" placeholder="Height" required="required" width="48" height="10"/>
+       Height <input type="text" name="Height" placeholder="Height" required="required" width="48" height="10"/> 
+       <div>
+       <button type="SUBMIT" >PREDICT</button><br />
+       </div>
+    </center>
+  </form>
+  <!-- Show predicted output using ML model --> 
+  <div>
+    <center>
+    <h2>{{ prediction_text }}</h2>
+    <br> {{ pred}}
+    </center>
+  </div>
+  </div>
+ </body>
+</html>
